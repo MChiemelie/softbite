@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+*{
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+body{
+    background: #eee;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container, .title{
+    font-size: 1.8rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container, .products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+}
+
+ .products-container .product{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--tertiarycolour);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.products-container .product:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+
+.p .product img{
+    height: 18.5rem;
+}
+
+.container, .products-container .product:hover img{
+    transform: scale(.9);
+}
+
+.container .products-container .product h3{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container, .products-container .product:hover h3{
+    font-size: 2.1rem;
+    color: #27ae27;
+}
+
+.container, .products-container .product .price{
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.products-preview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display:  none;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview{
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    background: var(--tertiarycolour);
+    position: relative;
+    margin: 0;
+    max-width: 27.5em;
+    border-radius: .2rem;
+}
+
+.products-preview .preview.active{
+    display: inline-block;
+}
+
+.products-preview .preview img{
+    height: 15rem;
+}
+
+.products-preview .preview .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 1.5rem;
+}
+
+.products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+    color: #444;
+    padding: .3rem 0;
+    font-size: 2rem;
+}
+
+.products-preview .preview .stars{
+    padding: 1rem 0;
+    font-size: .75rem;
+}
+
+.products-preview .preview .stars i{
+    color: #10c55c;
+}
+
+.products-preview .preview .stars span{
+    color: #999;
+} 
+
+.products-preview .preview p{
+    line-height: 1.5;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #777;
+    margin: 0%;
+}
+
+.products-preview .preview .price{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #27ae60;
+    margin: 0%;
+}
+
+.products-preview .preview .buttons{
+    display: flex;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    margin-top: .2rem;
+}
+
+.products-preview .preview .buttons a{
+    flex: 1 1 12rem;
+    padding: .5rem;
+    color: #444;
+    border: .1rem solid #444;
+    font-size: 1.2rem;
+    margin: 0%;
+    text-decoration: none;
+}
+
+.products-preview .preview .buttons a.cart{
+    background: #555;
+    color: #fff;
+}
+
+.products-preview .preview .buttons a.cart:hover{
+    background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover{
+    color: #fff;
+    background: #27ae60
+}
+
+@media screen {
+    
+}
+
+/* *, *::after, ::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --slider-padding: 2rem;
+}
+
+body{
+    margin: 0;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.slide-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider{
+    --items-per-screen: 2;
+    --slider-index: 0;
+    margin: 1rem auto;
+    display: flex;
+    flex-grow: 1;
+    width: calc(100% - 2 * var(--slider-padding));
+    transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
+}
+
+
+.card{
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    padding: 0 .20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.handle{
+    border: none;
+    border-radius: .5rem;
+    flex-grow: 0;
+    width: 5rem;
+    height: 12rem;
+    background-color: var(--primary-colour);
+    z-index: 10;
+    margin:  3.3rem 0;
+    cursor: pointer;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    line-height: 0;
+    transition: background-color 150ms ease-in-out;
+}
+
+.handle:hover{
+    transform: scale(1.5);
+}
+
+.left-handle{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.right-handle{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.text{
+    transition: transform 150ms ease-in-out;
+}
+
+.handle:hover .text {
+    transform: scale(1.5);
+}
+
+.card-image{
+    position: relative;
+    height: 16rem;
+    width: 13rem;
+    border-radius: 2%;
+    background: var(--tertiarycolour);
+    padding: .1rem;
+}
+
+.image-content{
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    row-gap: 1px;
+    position: relative;
+    width: 20rem;
+    justify-content: center;
+}
+
+.card-content{
+    background-color: var(--secondaycolour);
+    text-align: center;
+    height: 18rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem .5rem;
+}
+
+.name{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.desc{
+    padding: 1rem .25rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.button{
+   background-color: rgb(43, 30, 10);
+   border: none;
+   border-radius: .10rem;
+   color: rgb(235, 215, 178);
+   padding: .60rem 3rem;
+   cursor: pointer;
+   transition: all 0.5s ease;
+   margin: 1rem;
+}
+
+.progress-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.progress-item{
+    height: .3rem;
+    width: 33%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.progress-item.active{
+    background-color: white;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(232, 222, 210);
+}
+
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: relative;
+    height: 50rem;
+    width: 30rem;
+    right: -280rem;
+    background-color: red;
+}
+
+
+
+/* Tablet */
+/* @media screen and (min-width: 573px) and (max-width: 768px) {
+    .slider{
+        --items-per-screen: 1;
+        --slider-index: 0;
+        display: flex;
+        flex-grow: 1;
+        margin: 1rem auto;
+        width: calc(100% - 2 * var(--slider-padding));
+        transform: translateX(calc(var(--slider-index) * -100%));
+        transition: transform 250ms ease-in-out;
+    }
+    
+    
+    .card{
+        flex: 0 0 calc(100% / var(--items-per-screen));
+        max-width: calc(100% / var(--items-per-screen));
+        padding: 0 .20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .handle{
+        border: none;
+        border-radius: .5rem;
+        flex-grow: 0;
+        width: 5rem;
+        height: 12rem;
+        background-color: var(--primary-colour);
+        z-index: 10;
+        margin:  3.3rem 0;
+        cursor: pointer;
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        line-height: 0;
+        transition: background-color 150ms ease-in-out;
+    }
+    
+    .handle:hover{
+        transform: scale(1.1);
+    }
+    
+    .left-handle{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .right-handle{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .text{
+        transition: transform 150ms ease-in-out;
+    }
+    
+    .handle:hover .text {
+        transform: scale(1.5);
+    }
+    
+    .card-image{
+        position: relative;
+        height: 16rem;
+        width: 13rem;
+        border-radius: 2%;
+        background: var(--tertiarycolour);
+        padding: .1rem;
+    }
+    
+    .image-content{
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        row-gap: 1px;
+        position: relative;
+        width: 20rem;
+        justify-content: center;
+    }
+    
+    .card-content{
+        background-color: var(--secondaycolour);
+        text-align: center;
+        height: 18rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem .5rem;
+    }
+    
+    .name{
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    
+    .desc{
+        padding: 1rem .25rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .button{
+       background-color: rgb(43, 30, 10);
+       border: none;
+       border-radius: .10rem;
+       color: rgb(235, 215, 178);
+       padding: .60rem 3rem;
+       cursor: pointer;
+       transition: all 0.5s ease;
+       margin: 1rem;
+    }
+    
+    .progress-bar{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+    
+    .progress-item{
+        height: .3rem;
+        width: 33%;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .progress-item.active{
+        background-color: white;
+    }
+    
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(232, 222, 210);
+    }
+    
+    .overlay::before,
+    .overlay::after{
+        content: '';
+        position: relative;
+        height: 50rem;
+        width: 30rem;
+        right: -280rem;
+        background-color: red;
+    }
+}
+
+
+/* Smartphone */
+/* @media screen and (min-width:320px) and (max-width: 577px) {
+    .slider{
+    --items-per-screen: 1;
+    --slider-index: 0;
+    display: flex;
+    flex-grow: 1;
+    width: calc(100% - 2 * var(--slider-padding));
+    transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
+    }
+    
+    .card{
+        flex-direction: column;
+        padding: .1rem;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .card-image{
+        border-radius: 2%;
+        background: var(--tertiarycolour);
+        object-fit: contain;
+    }
+
+    .card-img{
+        margin: 0;
+        justify-content: center;
+    }
+
+    .image-content{
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-around;
+        width: 95%;
+    }
+
+    .card-content{
+        display: flex;
+        justify-content: center;
+        background-color: var(--secondaycolour);
+        width: 95%;
+        margin: 0 5rem;
+        position: relative;
+    }
+
+    .name{
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .desc{
+        padding: 1rem .2rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .button{
+    background-color: rgb(43, 30, 10);
+    border: none;
+    border-radius: .10rem;
+    color: rgb(235, 215, 178);
+    padding: .60rem 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease; 
+    margin: 1rem;
+    }
+
+    .progress-bar{
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+        margin: 1rem auto;
+    }
+    
+    .progress-item{
+        height: .3rem;
+        width: 15%;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .progress-item.active{
+        background-color: white;
+    }
+
+    .handle{
+        border: none;
+        border-radius: .5rem;
+        flex-grow: 0;
+        width: 5rem;
+        height: 12rem;
+        background-color: var(--primary-colour);
+        z-index: 10;
+        margin:  3.3rem 0;
+        cursor: pointer;
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        line-height: 0;
+        transition: background-color 150ms ease-in-out;
+    }
+    
+    .handle:hover{
+        transform: scale(1.5);
+    }
+    
+    .left-handle{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .right-handle{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .text{
+        transition: transform 150ms ease-in-out;
+    }
+    
+    .handle:hover .text::after::before {
+        transform: scale(1.5);
+    }
+}     */

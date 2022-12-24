@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/slide.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/select.css">
+    <link rel="stylesheet" href="./css/login.css">
+    
+    <title>SoftBite Eatery</title>
+
+    <script src="./js/app.js" defer></script>
+    <script type="module" src="./index.js"></script> 
+    <script src="./js/lga.js"></script>
+
+  </head>
+  <body>
+    <header>
+    <div class="header-props">
+            <nav class="navbar"> 
+                <img id="logo" src="img/softbite_logo.png" alt="SoftBite Logo">
+                <img src="/img/profile-image." alt="">
+            </nav>
+      <div class="greeting">
+      <h1>Welcome To SoftBite</h1> 
+      <p>SoftBite is your oasis of deliciousness. Serving and satisfying you with the best of meals, from our traditional foods to continental dishes!</p>               
+      </div>
+    </div>
+</header>
+<main>
+    <div class="signing-form" id="signUp">
+        <h1>Login To SoftBite</h1>
+        <form action="">
+            <fieldset class="optional-signup">
+              <legend>Sign In With</legend>
+              <button type="button" class="sign-btn google" id="google">Google</button>
+              <button type="button" class="sign-btn facebook">Facebook</button>
+            </fieldset>
+          <p>Don't have an Account? <a id="signInBtn">Sign In!</a></p>
+          <hr>
+          <fieldset>
+            <input value="Chiemelie" type="email tel" placeholder="Email or Phone Number" id="email" class="input-box long" required></input>
+            <input type="password" placeholder="Password" id="pword"  class="input-box" required></input>
+          </fieldset>
+          <p><span><input type="checkbox"></span> I agree to the Terms and Conditions</p>
+          <button type="submit" id="signBtn" class="sign-btn">Sign In</button>
+        </form>
+    </div>
+    <div class="signing-form" id="signIn">
+        <h1>Create a SoftBite Account</h1>
+        <form class='signup' action="">
+            <fieldset class="optional-signup">
+              <legend>Sign Up With</legend>
+              <button type="button" class="sign-btn google" id="google">Google</button>
+              <button type="button" class="sign-btn facebook">Facebook</button>
+            </fieldset>
+          <p>Already have an Account? <a id="signUpBtn">Sign Up!</a></p>
+          <hr>
+          <fieldset>
+            <input type="email" placeholder="Email" class="input-box " id="signupBtn" required></input>
+            <input type="password" placeholder="Password" id="txtPassword" class="input-box" required="">
+          
+          <fieldset  class="signup">
+            <legend>Your Location</legend>
+            <input type="text" required placeholder="Address | 3 Your Street Name" class="input-box long location-input" ></input>
+            <div class="select-flex">
+              <div class="select">
+                          <select onchange="toggleLGA(this);" name="state" id="state" class="form-control">
+                              <option value="" selected="selected" id="standard-select"> Your State</option>
+                              <option value="Abia">Abia</option>
+                              <option value="Adamawa">Adamawa</option>
+                              <option value="AkwaIbom">AkwaIbom</option>
+                              <option value="Anambra">Anambra</option>
+                              <option value="Bauchi">Bauchi</option>
+                              <option value="Bayelsa">Bayelsa</option>
+                              <option value="Benue">Benue</option>
+                              <option value="Borno">Borno</option>
+                              <option value="Cross River">Cross River</option>
+                              <option value="Delta">Delta</option>
+                              <option value="Ebonyi">Ebonyi</option>
+                              <option value="Edo">Edo</option>
+                              <option value="Ekiti">Ekiti</option>
+                              <option value="Enugu">Enugu</option>
+                              <option value="FCT">FCT</option>
+                              <option value="Gombe">Gombe</option>
+                              <option value="Imo">Imo</option>
+                              <option value="Jigawa">Jigawa</option>
+                              <option value="Kaduna">Kaduna</option>
+                              <option value="Kano">Kano</option>
+                              <option value="Katsina">Katsina</option>
+                              <option value="Kebbi">Kebbi</option>
+                              <option value="Kogi">Kogi</option>
+                              <option value="Kwara">Kwara</option>
+                              <option value="Lagos">Lagos</option>
+                              <option value="Nasarawa">Nasarawa</option>
+                              <option value="Niger">Niger</option>
+                              <option value="Ogun">Ogun</option>
+                              <option value="Ondo">Ondo</option>
+                              <option value="Osun">Osun</option>
+                              <option value="Oyo">Oyo</option>
+                              <option value="Plateau">Plateau</option>
+                              <option value="Rivers">Rivers</option>
+                              <option value="Sokoto">Sokoto</option>
+                              <option value="Taraba">Taraba</option>
+                              <option value="Yobe">Yobe</option>
+                              <option value="Zamfara">Zamafara</option>
+                          </select>
+              <span class="focus"></span>
+                      </div>
+                      <div class="select">
+                          <select name="lga" id="lga" class="form-control select-lga" required>
+                          </select>
+                      </div>
+            </div>
+        </fieldset>
+          <p><span><input type="checkbox"></span> I agree to the Terms and Conditions</p>
+          <button type="submit" class="sign-btn">Sign Up</button>
+        </form>
+      </div>
+  <section>
+      <h1 class=" intro-heading">Local Meals</h1>
+      <p  class="intro-heading">This are our local, African meals, you would enjoy. We've the best varities of rice, beans, and soups that safisfies you. </p>
+      <section class="row">
+        <h2  class="intro-heading">Rice</h2>
+        <p class="intro-heading">It will please you to have a nice plate here at ShopBite.</p>
+        <p class="intro-heading">Enjoy your serving of any type of rice with beef, chicken, turkey, fried fish, eggs, or plaintain. </p>
+        <div class="container">
+            <div class="products-container">
+                <div class="product" data-name="p-1">
+                    <img src="img/jollof_rice.jpeg" alt="">
+                    <h3>Jollof Rice</h3>
+                    <div class="price">N500</div>
+                </div>
+                <div class="product" data-name="p-2">
+                    <img src="img/fried_rice.jpg" alt="">
+                    <h3>Fried Rice</h3>
+                    <div class="price">N500</div>
+                </div>
+                <div class="product" data-name="p-3">
+                    <img src="img/coconut_rice.jpeg" alt="">
+                    <h3>Coconut Rice</h3>
+                    <div class="price">N500</div>
+                </div>
+                <div class="product" data-name="p-4">
+                    <img src="img/braised_rice.jpeg" alt="">
+                    <h3>Braised Rice</h3>
+                    <div class="price">N500</div>
+                </div>
+                <div class="product" data-name="p-5">
+                    <img src="img/riceandstew.jpg" alt="">
+                    <h3>Rice and Stew</h3>
+                    <div class="price">N500</div>
+                </div>
+                <div class="product" data-name="p-6">
+                    <img src="img/native_rice.jpg" alt="">
+                    <h3>Native Rice</h3>
+                    <div class="price">N500</div>
+                </div>
+            </div>
+        </div>
+        <div class="products-preview">
+            <div class="preview" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="img/jollof_rice.jpeg" alt="">
+                <h3>Jollof Rice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(250)</span>
+                </div>
+                <p class="desc">This is more than your regular Ghanaian or Nigerian jollof rice. Absolutely, delicoius!</p>
+                <div class="price">N500</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="cart">Add To Cart</a>
+            </div>
+            </div>
+            <div class="preview" data-target="p-2">
+                <i class="fas fa-times"></i>
+                <img src="img/fried_rice.jpg" alt="">
+                <h3>Fried Rice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(250)</span>
+                </div>
+                <p class="desc">Your tasty and stir fried rice! This delicious and very nice. <br> Enjoy!</p>
+                <div class="price">N500</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="cart">Add To Cart</a>
+            </div>
+                </div>
+            
+            <div class="preview" data-target="p-3">
+                <i class="fas fa-times"></i>
+                <img src="img/coconut_rice.jpeg" alt="">
+                <h3>Coconut Rice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(250)</span>
+                </div>
+                <p class="desc">Your tasty and stir fried rice! This delicious and very nice. <br> Enjoy!</p>
+                <div class="price">N500</div>
+                <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="cart">Add To Cart</a>
+            </div>
+            </div>
+            
+            <div class="preview" data-target="p-4">
+                <i class="fas fa-times"></i>
+                <img src="img/braised_rice.jpeg" alt="">
+                <h3>Braised Rice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(250)</span>
+                </div>
+                <p class="desc">Your tasty and stir fried rice! This delicious and very nice. <br> Enjoy!</p>
+                <div class="price">N500</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="cart">Add To Cart</a>
+            </div>
+            </div>
+            
+            <div class="preview" data-target="p-5">
+                <i class="fas fa-times"></i>
+                <img src="img/riceandstew.jpg" alt="">
+                <h3>Rice and Stew</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(250)</span>
+                </div>
+                <p class="desc">Your tasty and stir fried rice! This delicious and very nice. <br> Enjoy!</p>
+                <div class="price">N500</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="cart">Add To Cart</a>
+            </div>
+            </div>
+            
+            <div class="preview" data-target="p-6">
+                <i class="fas fa-times"></i>
+                <img src="img/native_rice.jpg" alt="">
+                <h3>Native Rice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(250)</span>
+                </div>
+                <p class="desc">Your tasty and stir fried rice! This delicious and very nice. <br> Enjoy!</p>
+                <div class="price">N500</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="cart">Add To Cart</a>
+            </div>
+            </div>  
+        </div>
+    </section>
+</main>
+<footer>
+  <p>This website was built and developed by Chiemelie Codes</p>
+  <p>All Rights Reserved</p>
+</footer>
+  </body>
+</html>

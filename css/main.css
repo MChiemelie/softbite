@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+:root{
+    --primarycolour: rgb(222, 184, 135);
+    --secondaycolour: rgba(173, 120, 51);
+    --tertiarycolour:  rgb(247, 241, 231);
+    --font-size: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primarycolour);
+    font-family: 'Comic Neue', cursive;
+    line-height: 1.5;
+    height: 100vh;
+    justify-content: center;
+    padding: 0;
+    font-size: var(---font-size);
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 2.5rem;
+}
+
+main h1.intro-heading{
+    font-weight: 30rem;
+    line-height: 1rem;
+    margin: .5rem auto 0;
+    text-align: justify;
+    padding: 1.4rem 2rem;
+    font-size: 2.5rem;
+    background-color: rgba(173, 120, 51, 0.753);
+}
+
+main h2.intro-heading{
+    font-weight: 300px;
+    line-height: 1rem;
+    margin:  .5rem auto 0;
+    text-align: justify;
+    padding: 1.4rem 2rem;
+    font-size: 2rem;
+    background-color: rgba(173, 120, 51, 0.753);
+}
+
+main p.intro-heading{
+    padding: .5rem 3rem;
+    line-height: 2.5rem;
+}

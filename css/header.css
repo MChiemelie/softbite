@@ -1,0 +1,115 @@
+.header-props-visible{
+    visibility: hidden;
+} 
+
+.header-props{
+    visibility: visible;
+}
+
+nav{
+    position: fixed;
+    background-color: rgba(222, 184, 135, 0.45);
+    margin: auto;
+    overflow: hidden;
+    padding: 0 .15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-end-end-radius: .2rem;
+    width: 100%;
+    z-index: auto;
+}
+
+#logo{
+    width: 5rem;
+    margin: .25rem 2.5rem;
+    border-radius: .15rem;
+}
+
+#profile-image{
+    border-radius: 50%;
+    width: 3.5rem;
+    margin: 0 1rem;
+}
+
+#profile-image:hover, #logo:hover{
+    transform: scale(1.05);
+}
+
+header{
+    background-image: url("../img/restaurant1.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header h1,
+header p{
+    background: linear-gradient(135deg, rgba(173, 120, 51 0.1), rgba(222, 184, 135, 0.658));
+    backdrop-filter:  blur(5rem);
+    -webkit-backdrop-filter: blur(5rem);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(--tertiarycolour);
+    border-radius: .25rem;
+    color: rgb(236, 232, 225);
+    transform: translate(-25%, 10%);
+    padding: .5rem;
+}
+
+header h1{
+    font-size: 5vw;
+    align-self: flex-end;
+    width: fit-content;
+}
+
+header p{
+    font-size: 1.5vw;
+    line-height: 2.5;
+    max-width: fit-content;
+}
+
+.greeting{
+    display: flexbox;
+    top: calc(100vh - 50vh);
+    left: calc(100vw - 75vw);
+    position: absolute;
+    text-align: left;
+    width: max-content;
+    justify-content: grid;
+}
+
+/* Tablet */
+@media screen and (min-width:426px) and (max-width: 768px) {
+    header h1{
+        font-size: 5.5vw;
+    }
+
+    header p{
+        font-size: 3vw;
+        line-height: 2;
+    }
+
+    header h1,
+    header p{
+        max-width: 65vw;
+    }
+} 
+
+/* Smartphone */
+@media screen and (max-width: 425px) {
+     header h1{
+        font-size: 6.5vw;
+    }
+
+    header p{
+        font-size: 3.62vw;
+        line-height: 2.4;
+    }
+
+    header h1,
+    header p{
+        max-width: 65vw;
+    }
+}
