@@ -8,108 +8,124 @@
 
 nav{
     position: fixed;
-    background-color: rgba(222, 184, 135, 0.45);
+    width: 98%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: .28rem 1%;
+    transition: all 0.50s ease;
     margin: auto;
     overflow: hidden;
-    padding: 0 .15rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-end-end-radius: .2rem;
-    width: 100%;
-    z-index: auto;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main a, #menu-icon{
+    color: #fff;
+    font-size: 2rem;
+    transition: all .50s ease;
+}
+
+.user{
+    display: flex;
+    align-items: center;
 }
 
 #logo{
     width: 5rem;
-    margin: .25rem 2.5rem;
+    margin: .25rem .5rem;
     border-radius: .15rem;
 }
 
-#profile-image{
-    border-radius: 50%;
-    width: 3.5rem;
-    margin: 0 1rem;
+#logo:hover, .user i:hover, #menu-icon:hover{
+    transform: scale(1.12);
 }
 
-#profile-image:hover, #logo:hover{
-    transform: scale(1.05);
+.xx{
+    margin: .5rem  1.5rem;
 }
 
 header{
-    background-image: url("../img/restaurant1.jpg");
-    height: 100%;
+    background-image: url('/img/pexels-asad-photo-maldives-1449773.jpg');
+    height: 100vh;
+    width: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    position: relative;
 }
 
 header h1,
 header p{
-    background: linear-gradient(135deg, rgba(173, 120, 51 0.1), rgba(222, 184, 135, 0.658));
-    backdrop-filter:  blur(5rem);
+    background: linear-gradient(135deg, rgba(173, 120, 51 0.1), rgba(0, 0, 0, 0.658));
+    backdrop-filter:  blur(.9rem);
     -webkit-backdrop-filter: blur(5rem);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(85, 7, 7, 0.37);
     border: 1px solid rgba(--tertiarycolour);
     border-radius: .25rem;
-    color: rgb(236, 232, 225);
+    color: var(--tertiarycolour);
     transform: translate(-25%, 10%);
     padding: .5rem;
 }
 
-header h1{
-    font-size: 5vw;
+header p b{
+    font-size: 2.2rem;
     align-self: flex-end;
-    width: fit-content;
+    padding: 0;
+    margin: 0;
 }
 
 header p{
-    font-size: 1.5vw;
-    line-height: 2.5;
-    max-width: fit-content;
+    font-size: 140%;
+    line-height: 1.8;
 }
 
 .greeting{
-    display: flexbox;
-    top: calc(100vh - 50vh);
-    left: calc(100vw - 75vw);
+    top: calc(100vh - 52.5vh);
+    left: calc(100vw - 80vw);
     position: absolute;
-    text-align: left;
-    width: max-content;
     justify-content: grid;
+    max-width: 58%;
 }
 
-/* Tablet */
-@media screen and (min-width:426px) and (max-width: 768px) {
-    header h1{
-        font-size: 5.5vw;
+@media screen and (max-width: 480px) {
+    .main a, #menu-icon{
+        font-size: 150%;
+        transition: all .50s ease;
+        margin: .2rem  .8rem;
+    }
+    
+    #logo{
+        width: 3rem;
+        margin: .1rem;
+        border-radius: .15rem;
     }
 
     header p{
-        font-size: 3vw;
-        line-height: 2;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    header p b{
+        font-size: 1.2rem;
+        align-self: flex-end;
+        padding: 0;
+        margin: 0;
     }
 
-    header h1,
-    header p{
-        max-width: 65vw;
-    }
-} 
-
-/* Smartphone */
-@media screen and (max-width: 425px) {
-     header h1{
-        font-size: 6.5vw;
-    }
-
-    header p{
-        font-size: 3.62vw;
-        line-height: 2.4;
-    }
-
-    header h1,
-    header p{
-        max-width: 65vw;
+    .greeting{
+        top: calc(100vh - 45vh);
+        left: calc(100vw - 80vw);
+        position: absolute;
+        justify-content: grid;
+        max-width: 58%;
     }
 }
+

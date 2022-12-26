@@ -127,22 +127,22 @@ function throttle(cb, delay = 1000) {
     }
 }
 
-try {
-	document.getElementById('profile-image').addEventListener("click", () => {
-	    document.querySelector(".signing-form").classList.add('open-Login');
-	    document.querySelector(".navbar").classList.add('header-props-visible');
-	    document.querySelector(".greeting").classList.add('header-props-visible');
-	});
-} catch (error) {
-	console.log(error);
+import Typed from 'typed.js';
+
+var options = {
+  strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+  typeSpeed: 40
+};
+
+var typed = new Typed('.element', options);
+
+window.onscroll = (e) => {
+    document.querySelector('nav').classList.add('newnav');
 }
 
-document.getElementById('signInBtn').addEventListener('click', () => {
-    const signIn = document.getElementById('signIn').innerHTML;
-    document.getElementById('signUp').innerHTML = signIn;
-});
+var options = {
+  strings: ['Good Morning', 'Welcome To SoftBite, ... your oasis of deliciuosness'],
+  typeSpeed: 40
+};
 
-document.getElementById('signUpBtn').addEventListener('click', () => {
-    const signUp = document.getElementById('signUp').innerHTML;
-    document.getElementById('signIn').innerHTML = signUp;
-});
+var typed = new Typed('.element', options);

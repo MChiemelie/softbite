@@ -2,7 +2,7 @@
 
 :root{
     --primarycolour: rgb(222, 184, 135);
-    --secondaycolour: rgba(173, 120, 51);
+    --secondarycolour: rgba(173, 120, 51);
     --tertiarycolour:  rgb(247, 241, 231);
     --font-size: 100%;
 }
