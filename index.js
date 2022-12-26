@@ -127,22 +127,22 @@ function throttle(cb, delay = 1000) {
     }
 }
 
-import Typed from 'typed.js';
+// import Typed from 'typed.js';
 
-var options = {
-  strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
-  typeSpeed: 40
-};
+// var options = {
+//   strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+//   typeSpeed: 40
+// };
 
-var typed = new Typed('.element', options);
+// var typed = new Typed('.element', options);
 
-window.onscroll = (e) => {
-    document.querySelector('nav').classList.add('newnav');
-}
+// window.onscroll = (e) => {
+//     document.querySelector('nav').classList.add('newnav');
+// }
 
-var options = {
-  strings: ['Good Morning', 'Welcome To SoftBite, ... your oasis of deliciuosness'],
-  typeSpeed: 40
-};
+// var options = {
+//   strings: ['Good Morning', 'Welcome To SoftBite, ... your oasis of deliciuosness'],
+//   typeSpeed: 40
+// };
 
-var typed = new Typed('.element', options);
+// var typed = new Typed('.element', options);
