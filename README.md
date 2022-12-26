@@ -1,4 +1,4 @@
-# About Softbite
+# About SoftBite
 
 
 
