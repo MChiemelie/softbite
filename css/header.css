@@ -7,7 +7,7 @@
 }
 
 nav{
-    position: fixed;
+    position: relative;
     width: 98%;
     top: 0;
     right: 0;
