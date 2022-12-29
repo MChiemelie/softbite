@@ -1,4 +1,4 @@
-.signing-form{
+.signIn-form, .signUp-form{
   background: linear-gradient(135deg, rgba(173, 120, 51 0.1), rgba(222, 184, 135, 0.658));
   backdrop-filter:  blur(5rem);
   -webkit-backdrop-filter: blur(5rem);

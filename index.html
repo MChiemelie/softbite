@@ -12,37 +12,34 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-    <link rel="stylesheet" href="./css/slide.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/select.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/login.css">
     
     <title>SoftBite Eatery</title>
 
-
-    <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
-    <script  src="index.js" type="text/javascript" defer></script> 
-    <script type="module" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script  src="index.js" defer></script> 
 
   </head>
   <body>
     <header>
-        <nav>
-            <img href src="/img/softbite_logo.png" alt="SoftBite Logo" id="logo">
+        <nav role="navigation"  class="header-props">
+            <img src="/img/softbite_logo.png" alt="SoftBite Logo" id="logo">
                 <ul class="main">
-                    <a href="#" class="user xx"><i class="ri-user-add-line"></i></a>
-                    <a href="#" class="user  xx"><i class="ri-user-shared-line"></i></a>
+                    <a href="#" class="user xx"><i id="signupicon" class="ri-user-add-line"></i></a>
+                    <a href="#" class="user  xx"><i id="signinicon" class="ri-user-shared-line"></i></a>
                     <span class="bx bx-menu xx" id="menu-icon"></span>
                 </ul>
         </nav>
-      <div class="greeting">
-      <p><b>Welcome To SoftBite.</b> <br> SoftBite is your oasis of deliciousness. Serving and satisfying you with the best of meals, from our traditional foods to continental dishes!</p>               
+      <div class="greeting" >
+      <p  class="header-props"><b>Welcome To SoftBite.</b> <br> SoftBite is your oasis of deliciousness. Serving and satisfying you with the best of meals, from our traditional foods to continental dishes!</p>               
       </div>
     </div>
 </header>
 <main>
-    <div class="signing-form" id="signUp">
+    <div class="signIn-form">
         <h1>Login To SoftBite</h1>
         <form action="">
             <fieldset class="optional-signup">
@@ -60,7 +57,7 @@
           <button type="submit" id="signBtn" class="sign-btn">Sign In</button>
         </form>
     </div>
-    <div class="signing-form" id="signIn">
+    <div class="signUp-form">
         <h1>Create a SoftBite Account</h1>
         <form class='signup' action="">
             <fieldset class="optional-signup">
