@@ -1,0 +1,23 @@
+{
+  "name": "softbite",
+  "version": "1.0.0",
+  "description": "SoftBite is an eatery website that I am building and *_committed_* to developing, just for my love of vanilla projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MChiemelie/softbite.git"
+  },
+  "keywords": [],
+  "author": "Melikam Chukwuemelie John <melikamchukwuemelie@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MChiemelie/softbite/issues"
+  },
+  "homepage": "https://github.com/MChiemelie/softbite#readme",
+  "dependencies": {
+    "firebase": "^9.15.0"
+  }
+}
