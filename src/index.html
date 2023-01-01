@@ -33,8 +33,8 @@
         <nav role="navigation"  class="header-props">
             <img src="./img/softbite_logo.png" alt="SoftBite Logo" id="logo">
                 <ul class="main">
-                    <a href="#" class="user xx"><i id="signupicon" class="ri-user-add-line"></i></a>
-                    <a href="#" class="user  xx"><i id="signinicon" class="ri-user-shared-line"></i></a>
+                    <a href="#" class="user xx"><i class="ri-google-fill"></i></a>
+                    <a href="#" class="user  xx"><i class="ri-facebook-box-fill"></i></a>
                     <span class="bx bx-menu xx" id="menu-icon"></span>
                 </ul>
         </nav>
@@ -44,95 +44,6 @@
     </div>
 </header>
 <main>
-    <div class="signIn-form">
-        <h1>Login To SoftBite</h1>
-        <form action="">
-            <fieldset class="optional-signup">
-              <legend>Sign In With</legend>
-              <button type="button" class="sign-btn google" id="google">Google</button>
-              <button type="button" class="sign-btn facebook">Facebook</button>
-            </fieldset>
-          <p>Don't have an Account? <a id="signInBtn">Sign In!</a></p>
-          <hr>
-          <fieldset>
-            <input type="email tel" placeholder="Email or Phone Number" id="email" class="input-box long" required></input>
-            <input type="password" placeholder="Password" id="pword"  class="input-box" required></input>
-          </fieldset>
-          <p><span><input type="checkbox"></span> I agree to the Terms and Conditions</p>
-          <button type="submit" id="signBtn" class="sign-btn">Sign In</button>
-        </form>
-    </div>
-    <div class="signUp-form">
-        <h1>Create a SoftBite Account</h1>
-        <form class='signup' action="">
-            <fieldset class="optional-signup">
-              <legend>Sign Up With</legend>
-              <button type="button" class="sign-btn google" id="google">Google</button>
-              <button type="button" class="sign-btn facebook">Facebook</button>
-            </fieldset>
-          <p>Already have an Account? <a id="signUpBtn">Sign Up!</a></p>
-          <hr>
-          <fieldset>
-            <input type="email" placeholder="Email" class="input-box " id="signupBtn" required></input>
-            <input type="password" placeholder="Password" id="txtPassword" class="input-box" required="">
-          
-          <fieldset  class="signup">
-            <legend>Your Location</legend>
-            <input type="text" required placeholder="Address | 3 Your Street Name" class="input-box long location-input" ></input>
-            <div class="select-flex">
-              <div class="select">
-                          <select onchange="toggleLGA(this);" name="state" id="state" class="form-control">
-                              <option value="" selected="selected" id="standard-select"> Your State</option>
-                              <option value="Abia">Abia</option>
-                              <option value="Adamawa">Adamawa</option>
-                              <option value="AkwaIbom">AkwaIbom</option>
-                              <option value="Anambra">Anambra</option>
-                              <option value="Bauchi">Bauchi</option>
-                              <option value="Bayelsa">Bayelsa</option>
-                              <option value="Benue">Benue</option>
-                              <option value="Borno">Borno</option>
-                              <option value="Cross River">Cross River</option>
-                              <option value="Delta">Delta</option>
-                              <option value="Ebonyi">Ebonyi</option>
-                              <option value="Edo">Edo</option>
-                              <option value="Ekiti">Ekiti</option>
-                              <option value="Enugu">Enugu</option>
-                              <option value="FCT">FCT</option>
-                              <option value="Gombe">Gombe</option>
-                              <option value="Imo">Imo</option>
-                              <option value="Jigawa">Jigawa</option>
-                              <option value="Kaduna">Kaduna</option>
-                              <option value="Kano">Kano</option>
-                              <option value="Katsina">Katsina</option>
-                              <option value="Kebbi">Kebbi</option>
-                              <option value="Kogi">Kogi</option>
-                              <option value="Kwara">Kwara</option>
-                              <option value="Lagos">Lagos</option>
-                              <option value="Nasarawa">Nasarawa</option>
-                              <option value="Niger">Niger</option>
-                              <option value="Ogun">Ogun</option>
-                              <option value="Ondo">Ondo</option>
-                              <option value="Osun">Osun</option>
-                              <option value="Oyo">Oyo</option>
-                              <option value="Plateau">Plateau</option>
-                              <option value="Rivers">Rivers</option>
-                              <option value="Sokoto">Sokoto</option>
-                              <option value="Taraba">Taraba</option>
-                              <option value="Yobe">Yobe</option>
-                              <option value="Zamfara">Zamafara</option>
-                          </select>
-              <span class="focus"></span>
-                      </div>
-                      <div class="select">
-                          <select name="lga" id="lga" class="form-control select-lga" required>
-                          </select>
-                      </div>
-            </div>
-        </fieldset>
-          <p><span><input type="checkbox"></span> I agree to the Terms and Conditions</p>
-          <button type="submit" class="sign-btn">Sign Up</button>
-        </form>
-      </div>
   <section>
       <h1 class=" intro-heading">Local Meals</h1>
       <p  class="intro-heading">This are our local, African meals, you would enjoy. We've the best varities of rice, beans, and soups that safisfies you. </p>

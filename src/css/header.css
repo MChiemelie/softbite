@@ -36,6 +36,10 @@ nav{
     align-items: center;
 }
 
+.ri-facebook-box-fill{
+    font-size: 2.7rem;
+}
+
 #logo{
     width: 5rem;
     margin: .25rem .5rem;
