@@ -41,7 +41,7 @@ body{
 }
 
 .products-container .product:hover{
-    outline: .2rem solid #222;
+    outline: .12rem solid #222;
     outline-offset: 0;
 }
 
@@ -56,7 +56,7 @@ body{
 .container .products-container .product h3{
     padding: .5rem 0;
     font-size: 2rem;
-    color: #444;
+    color: #222;
 }
 
 .container, .products-container .product:hover h3{

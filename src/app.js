@@ -1,8 +1,5 @@
 const previewContainer = document.querySelector('.products-preview');
 const previewBox = document.querySelectorAll('.preview');
-const signup =  document.getElementById('signupicon');
-const signin = document.getElementById('signinicon');
-const signingForm = document.querySelector('.signIn-form');
 
 
 document.querySelectorAll('.product').forEach(product => {
@@ -23,9 +20,4 @@ previewBox.forEach(close => {
         close.classList.remove('active');
         previewContainer.style.display = 'none';
     })
-});
-
-signup,addEventListener('click', (e)=> {
-    console.log('You are great!');
-    signingForm.style.visibilty = 'visible';
 });

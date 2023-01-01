@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 
 :root{
-    --primarycolour: rgb(222, 184, 135);
-    --secondarycolour: rgba(173, 120, 51);
+    --primarycolour: rgb(233, 208, 173);
+    --secondarycolour: rgb(190, 156, 112);
     --tertiarycolour:  rgb(247, 241, 231);
     --font-size: 100%;
 }
@@ -23,16 +23,8 @@ body{
     font-size: var(---font-size);
 }
 
-ul{
-    list-style-type: none;
-}
-
 a{
     text-decoration: none;
-}
-
-p{
-    line-height: 2.5rem;
 }
 
 main h1.intro-heading{
@@ -42,7 +34,7 @@ main h1.intro-heading{
     text-align: justify;
     padding: 1.4rem 2rem;
     font-size: 2.5rem;
-    background-color: rgba(173, 120, 51, 0.753);
+    background-color: var(--secondarycolour);
 }
 
 main h2.intro-heading{
@@ -52,7 +44,7 @@ main h2.intro-heading{
     text-align: justify;
     padding: 1.4rem 2rem;
     font-size: 2rem;
-    background-color: rgba(173, 120, 51, 0.753);
+    background-color: var(--secondarycolour);
 }
 
 main p.intro-heading{
