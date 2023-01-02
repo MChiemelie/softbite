@@ -22,20 +22,19 @@ previewBox.forEach(close => {
     })
 });
 
-import Typed from 'typed.js';
-
-const hey = 'Hey 👋, '
+const hey = 'Hey👋'
 
 const today= new Date(); 
 const hourNow = today.getHours(); 
-const greeting = hourNow > 18 ? `${hey}`+ 'Good Evening'
+
+const greeting = hourNow > 16 ? `${hey}`+ 'Good Evening'
 : hourNow > 12 ? `${hey}`+ 'Good Afternoon ' 
-: hourNow > 0  ? `${hey}`+ 'Good Morning' : 'Hey 👋'; 
+: hourNow > 0  ? `${hey}`+ 'Good Morning' : 'Hey 👋';
 
 var typed = new Typed('.type', {
     strings: [`${greeting}`,
-    'Welcome To SoftBite 🥘🍲🍳'],
-    typeSpeed: 200,
+     'Welcome To SoftBite 🥘🍲🍳'],
+    typeSpeed: 150,
     backSpeed: 60,
     loop: true
   });
