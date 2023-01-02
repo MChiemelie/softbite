@@ -22,6 +22,8 @@ previewBox.forEach(close => {
     })
 });
 
+import Typed from 'typed.js';
+
 const hey = 'Hey 👋, '
 
 const today= new Date(); 
