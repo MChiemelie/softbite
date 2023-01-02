@@ -29,10 +29,6 @@ nav{
     align-items: center;
 }
 
-.ri-facebook-box-fill{
-    font-size: 2.7rem;
-}
-
 #logo{
     width: 5rem;
     margin: .25rem .5rem;
@@ -56,34 +52,34 @@ header{
     background-size: cover;
 }
 
-header h1,
 header p{
     background: linear-gradient(135deg, rgba(173, 120, 51 0.1), rgba(0, 0, 0, 0.658));
-    backdrop-filter:  blur(.9rem);
-    -webkit-backdrop-filter: blur(5rem);
+    backdrop-filter:  blur(.1rem);
+    -webkit-backdrop-filter: blur(.5rem);
     box-shadow: 0 8px 32px 0 rgba(85, 7, 7, 0.37);
     border: 1px solid rgba(--tertiarycolour);
     border-radius: .25rem;
-    color: var(--tertiarycolour);
+    color: rgb(255, 255, 255);
     transform: translate(-25%, 10%);
     padding: .5rem;
+    font-family: 'Inter', Rasmus Andersson;
 }
 
 header p b{
-    font-size: 2.2rem;
+    font-size: 5vw;
     align-self: flex-end;
     padding: 0;
     margin: 0;
 }
 
 header p{
-    font-size: 140%;
+    font-size: 120%;
     line-height: 1.8;
 }
 
 .greeting{
-    top: calc(100vh - 52.5vh);
-    left: calc(100vw - 80vw);
+    top: 50%;
+    left: 30%;
     position: absolute;
     justify-content: grid;
     max-width: 58%;

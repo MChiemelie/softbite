@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/MChiemelie/softbite#readme",
   "dependencies": {
-    "firebase": "^9.15.0"
+    "firebase": "^9.15.0",
+    "typed.js": "^2.0.12"
   },
   "devDependencies": {
     "webpack": "^5.75.0",
