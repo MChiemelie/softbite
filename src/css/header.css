@@ -110,7 +110,7 @@ header p{
     }
 
     .greeting{
-        top: calc(100vh - 45vh);
+        top: calc(100vh - 50vh);
         left: calc(100vw - 80vw);
         position: absolute;
         justify-content: grid;
