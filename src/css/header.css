@@ -99,11 +99,10 @@ header p{
     }
 
     header p{
-        font-size: 1rem;
         line-height: 1.5;
     }
     header p b{
-        font-size: 1.2rem;
+        font-size: .9rem;
         align-self: flex-end;
         padding: 0;
         margin: 0;

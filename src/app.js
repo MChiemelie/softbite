@@ -22,7 +22,7 @@ previewBox.forEach(close => {
     })
 });
 
-const hey = 'Hey👋'
+const hey = 'Hey👋, '
 
 const today= new Date(); 
 const hourNow = today.getHours(); 
